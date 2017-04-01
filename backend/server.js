@@ -15,18 +15,6 @@ var connection = mysql.createConnection({
 });
 
 connection.connect();
- 
-connection.query('SELECT 1 + 1 AS solution', function (error, results, fields) {
-  if (error) throw error;
-  console.log('The solution is: ', results[0].solution);
-});
-
-//connection.end();
-
-/*var mongoose = require('mongoose');
-mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/smilethursday');
-require('./models/user');*/
 
 var app = express();
 
@@ -47,31 +35,9 @@ app.use(passport.session());
 
 app.use('/auth', auth);
 app.use('/api', api);
+
 app.get('/', function(req, res) {
   res.sendFile('index.html');
-});
-app.get('/image.jpg', function(req, res) {
-  res.sendfile(path.resolve('./uploads/image.jpg'));
-});
-
-app.post('/upload', function(req, res) {
-  if (!req.files)
-    return res.status(400).send('No files were uploaded.');
- 
-  // The name of the input field (i.e. "sampleFile") is used to retrieve the uploaded file 
-  let sampleFile = req.files.file;
- 
-  // Use the mv() method to place the file somewhere on your server 
-  mkdirp('./uploads', function (err) {
-    if (err) { return res.send(err); }
-  });
-
-  sampleFile.mv('./uploads/image.jpg', function(err) {
-    if (err)
-      return res.status(500).send(err);
- 
-    res.send('File uploaded!');
-  });
 });
 
 const port = 3000;
