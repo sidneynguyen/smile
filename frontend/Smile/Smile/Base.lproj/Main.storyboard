@@ -23,7 +23,7 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="2cs-8g-YzY" customClass="MasterPageViewController" customModule="Smile" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="94k-X3-XYq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="972" y="606"/>
+            <point key="canvasLocation" x="358" y="676"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="WlI-j3-quP">
@@ -86,35 +86,33 @@
             </objects>
             <point key="canvasLocation" x="2212" y="94.902548725637189"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="RDB-iA-Dg7">
+        <!--Global Feed View Controller-->
+        <scene sceneID="FNO-te-gEs">
             <objects>
-                <viewController storyboardIdentifier="GlobalFeedViewController" id="5NS-io-6gP" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="flA-k8-vY4"/>
-                        <viewControllerLayoutGuide type="bottom" id="y6W-fA-djZ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="xNy-d1-bue">
+                <tableViewController storyboardIdentifier="GlobalFeedViewController" id="sqT-ir-yGR" customClass="GlobalFeedViewController" customModule="Smile" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="EYt-Bp-gGF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="auQ-aw-S8h">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="y6W-fA-djZ" firstAttribute="top" secondItem="auQ-aw-S8h" secondAttribute="bottom" id="CS2-hn-Qpo"/>
-                            <constraint firstItem="auQ-aw-S8h" firstAttribute="leading" secondItem="xNy-d1-bue" secondAttribute="leading" id="UKR-xe-omS"/>
-                            <constraint firstAttribute="trailing" secondItem="auQ-aw-S8h" secondAttribute="trailing" id="n8P-Wm-G5c"/>
-                            <constraint firstItem="auQ-aw-S8h" firstAttribute="top" secondItem="xNy-d1-bue" secondAttribute="top" id="rNS-Nw-tLY"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jcq-2x-fwu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ga6-1t-NGv">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ga6-1t-NGv" id="RKO-K1-F3f">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="sqT-ir-yGR" id="k2J-zI-EQD"/>
+                            <outlet property="delegate" destination="sqT-ir-yGR" id="8gu-5f-zPm"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2yH-Pz-ldV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2655" y="385"/>
+            <point key="canvasLocation" x="2958" y="441"/>
         </scene>
     </scenes>
 </document>

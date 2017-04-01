@@ -13,7 +13,7 @@ var conn = mysql.createConnection({
 router.get('/posts', function(req, res) {
   var scope = req.query.scope;
   if (scope == 'global') {
-    conn.query('SELECT * FROM Posts ORDER BY date', function(err, results) {
+    conn.query('SELECT * FROM Posts ORDER BY date DESC', function(err, results) {
       if (err) { throw err; }
       console.log(results);
       res.json(results);
