@@ -3,6 +3,13 @@ var router = express.Router();
 var passport = require('passport');
 var mongoose = require('mongoose');
 var FacebookTokenStrategy = require('passport-facebook-token');
+var mysql = require('mysql');
+var connection = mysql.createConnection({
+  host     : 'localhost',
+  user     : 'root',
+  password : 'asdf',
+  database : 'smilethursday'
+});
 
 router.post('/facebook/token',
   passport.authenticate('facebook-token'),
