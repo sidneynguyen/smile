@@ -18,6 +18,29 @@
 		A35926A31E9026D90048BDEB /* CameraPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35926A21E9026D90048BDEB /* CameraPageViewController.swift */; };
 		A35926BC1E9042B30048BDEB /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A35926AF1E9042A10048BDEB /* AFNetworking.framework */; };
 		A35926BE1E9043060048BDEB /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A35926AF1E9042A10048BDEB /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A36969D51E90585E00990A43 /* MPOAddPersistedFaceResult.m in Sources */ = {isa = PBXBuildFile; fileRef = A36969A71E90585E00990A43 /* MPOAddPersistedFaceResult.m */; };
+		A36969D61E90585E00990A43 /* MPOCandidate.m in Sources */ = {isa = PBXBuildFile; fileRef = A36969A91E90585E00990A43 /* MPOCandidate.m */; };
+		A36969D71E90585E00990A43 /* MPOCreatePersonResult.m in Sources */ = {isa = PBXBuildFile; fileRef = A36969AB1E90585E00990A43 /* MPOCreatePersonResult.m */; };
+		A36969D81E90585E00990A43 /* MPOFace.m in Sources */ = {isa = PBXBuildFile; fileRef = A36969AD1E90585E00990A43 /* MPOFace.m */; };
+		A36969D91E90585E00990A43 /* MPOFaceAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = A36969AF1E90585E00990A43 /* MPOFaceAttributes.m */; };
+		A36969DA1E90585E00990A43 /* MPOFaceEmotion.m in Sources */ = {isa = PBXBuildFile; fileRef = A36969B11E90585E00990A43 /* MPOFaceEmotion.m */; };
+		A36969DB1E90585E00990A43 /* MPOFaceFeatureCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = A36969B31E90585E00990A43 /* MPOFaceFeatureCoordinate.m */; };
+		A36969DC1E90585E00990A43 /* MPOFaceHeadPose.m in Sources */ = {isa = PBXBuildFile; fileRef = A36969B51E90585E00990A43 /* MPOFaceHeadPose.m */; };
+		A36969DD1E90585E00990A43 /* MPOFaceLandmarks.m in Sources */ = {isa = PBXBuildFile; fileRef = A36969B71E90585E00990A43 /* MPOFaceLandmarks.m */; };
+		A36969DE1E90585E00990A43 /* MPOFaceList.m in Sources */ = {isa = PBXBuildFile; fileRef = A36969B91E90585E00990A43 /* MPOFaceList.m */; };
+		A36969DF1E90585E00990A43 /* MPOFaceListMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = A36969BB1E90585E00990A43 /* MPOFaceListMetadata.m */; };
+		A36969E01E90585E00990A43 /* MPOFaceMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = A36969BD1E90585E00990A43 /* MPOFaceMetadata.m */; };
+		A36969E11E90585E00990A43 /* MPOFaceRectangle.m in Sources */ = {isa = PBXBuildFile; fileRef = A36969BF1E90585E00990A43 /* MPOFaceRectangle.m */; };
+		A36969E21E90585E00990A43 /* MPOFaceServiceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A36969C21E90585E00990A43 /* MPOFaceServiceClient.m */; };
+		A36969E31E90585E00990A43 /* MPOFacialHair.m in Sources */ = {isa = PBXBuildFile; fileRef = A36969C41E90585E00990A43 /* MPOFacialHair.m */; };
+		A36969E41E90585E00990A43 /* MPOGroupResult.m in Sources */ = {isa = PBXBuildFile; fileRef = A36969C61E90585E00990A43 /* MPOGroupResult.m */; };
+		A36969E51E90585E00990A43 /* MPOIdentifyResult.m in Sources */ = {isa = PBXBuildFile; fileRef = A36969C81E90585E00990A43 /* MPOIdentifyResult.m */; };
+		A36969E61E90585E00990A43 /* MPOPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = A36969CA1E90585E00990A43 /* MPOPerson.m */; };
+		A36969E71E90585E00990A43 /* MPOPersonFace.m in Sources */ = {isa = PBXBuildFile; fileRef = A36969CC1E90585E00990A43 /* MPOPersonFace.m */; };
+		A36969E81E90585E00990A43 /* MPOPersonGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = A36969CE1E90585E00990A43 /* MPOPersonGroup.m */; };
+		A36969E91E90585E00990A43 /* MPOSimilarFace.m in Sources */ = {isa = PBXBuildFile; fileRef = A36969D01E90585E00990A43 /* MPOSimilarFace.m */; };
+		A36969EA1E90585E00990A43 /* MPOTrainingStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = A36969D21E90585E00990A43 /* MPOTrainingStatus.m */; };
+		A36969EB1E90585E00990A43 /* MPOVerifyResult.m in Sources */ = {isa = PBXBuildFile; fileRef = A36969D41E90585E00990A43 /* MPOVerifyResult.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +129,54 @@
 		A35926A01E90222C0048BDEB /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		A35926A21E9026D90048BDEB /* CameraPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraPageViewController.swift; sourceTree = "<group>"; };
 		A35926A41E9042A00048BDEB /* AFNetworking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AFNetworking.xcodeproj; path = "../../../Downloads/AFNetworking-master/AFNetworking.xcodeproj"; sourceTree = "<group>"; };
+		A36969A51E90585D00990A43 /* Smile-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Smile-Bridging-Header.h"; sourceTree = "<group>"; };
+		A36969A61E90585E00990A43 /* MPOAddPersistedFaceResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOAddPersistedFaceResult.h; sourceTree = "<group>"; };
+		A36969A71E90585E00990A43 /* MPOAddPersistedFaceResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOAddPersistedFaceResult.m; sourceTree = "<group>"; };
+		A36969A81E90585E00990A43 /* MPOCandidate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOCandidate.h; sourceTree = "<group>"; };
+		A36969A91E90585E00990A43 /* MPOCandidate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOCandidate.m; sourceTree = "<group>"; };
+		A36969AA1E90585E00990A43 /* MPOCreatePersonResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOCreatePersonResult.h; sourceTree = "<group>"; };
+		A36969AB1E90585E00990A43 /* MPOCreatePersonResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOCreatePersonResult.m; sourceTree = "<group>"; };
+		A36969AC1E90585E00990A43 /* MPOFace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOFace.h; sourceTree = "<group>"; };
+		A36969AD1E90585E00990A43 /* MPOFace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOFace.m; sourceTree = "<group>"; };
+		A36969AE1E90585E00990A43 /* MPOFaceAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOFaceAttributes.h; sourceTree = "<group>"; };
+		A36969AF1E90585E00990A43 /* MPOFaceAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOFaceAttributes.m; sourceTree = "<group>"; };
+		A36969B01E90585E00990A43 /* MPOFaceEmotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOFaceEmotion.h; sourceTree = "<group>"; };
+		A36969B11E90585E00990A43 /* MPOFaceEmotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOFaceEmotion.m; sourceTree = "<group>"; };
+		A36969B21E90585E00990A43 /* MPOFaceFeatureCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOFaceFeatureCoordinate.h; sourceTree = "<group>"; };
+		A36969B31E90585E00990A43 /* MPOFaceFeatureCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOFaceFeatureCoordinate.m; sourceTree = "<group>"; };
+		A36969B41E90585E00990A43 /* MPOFaceHeadPose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOFaceHeadPose.h; sourceTree = "<group>"; };
+		A36969B51E90585E00990A43 /* MPOFaceHeadPose.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOFaceHeadPose.m; sourceTree = "<group>"; };
+		A36969B61E90585E00990A43 /* MPOFaceLandmarks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOFaceLandmarks.h; sourceTree = "<group>"; };
+		A36969B71E90585E00990A43 /* MPOFaceLandmarks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOFaceLandmarks.m; sourceTree = "<group>"; };
+		A36969B81E90585E00990A43 /* MPOFaceList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOFaceList.h; sourceTree = "<group>"; };
+		A36969B91E90585E00990A43 /* MPOFaceList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOFaceList.m; sourceTree = "<group>"; };
+		A36969BA1E90585E00990A43 /* MPOFaceListMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOFaceListMetadata.h; sourceTree = "<group>"; };
+		A36969BB1E90585E00990A43 /* MPOFaceListMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOFaceListMetadata.m; sourceTree = "<group>"; };
+		A36969BC1E90585E00990A43 /* MPOFaceMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOFaceMetadata.h; sourceTree = "<group>"; };
+		A36969BD1E90585E00990A43 /* MPOFaceMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOFaceMetadata.m; sourceTree = "<group>"; };
+		A36969BE1E90585E00990A43 /* MPOFaceRectangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOFaceRectangle.h; sourceTree = "<group>"; };
+		A36969BF1E90585E00990A43 /* MPOFaceRectangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOFaceRectangle.m; sourceTree = "<group>"; };
+		A36969C01E90585E00990A43 /* MPOFaceSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOFaceSDK.h; sourceTree = "<group>"; };
+		A36969C11E90585E00990A43 /* MPOFaceServiceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOFaceServiceClient.h; sourceTree = "<group>"; };
+		A36969C21E90585E00990A43 /* MPOFaceServiceClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOFaceServiceClient.m; sourceTree = "<group>"; };
+		A36969C31E90585E00990A43 /* MPOFacialHair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOFacialHair.h; sourceTree = "<group>"; };
+		A36969C41E90585E00990A43 /* MPOFacialHair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOFacialHair.m; sourceTree = "<group>"; };
+		A36969C51E90585E00990A43 /* MPOGroupResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOGroupResult.h; sourceTree = "<group>"; };
+		A36969C61E90585E00990A43 /* MPOGroupResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOGroupResult.m; sourceTree = "<group>"; };
+		A36969C71E90585E00990A43 /* MPOIdentifyResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOIdentifyResult.h; sourceTree = "<group>"; };
+		A36969C81E90585E00990A43 /* MPOIdentifyResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOIdentifyResult.m; sourceTree = "<group>"; };
+		A36969C91E90585E00990A43 /* MPOPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOPerson.h; sourceTree = "<group>"; };
+		A36969CA1E90585E00990A43 /* MPOPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOPerson.m; sourceTree = "<group>"; };
+		A36969CB1E90585E00990A43 /* MPOPersonFace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOPersonFace.h; sourceTree = "<group>"; };
+		A36969CC1E90585E00990A43 /* MPOPersonFace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOPersonFace.m; sourceTree = "<group>"; };
+		A36969CD1E90585E00990A43 /* MPOPersonGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOPersonGroup.h; sourceTree = "<group>"; };
+		A36969CE1E90585E00990A43 /* MPOPersonGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOPersonGroup.m; sourceTree = "<group>"; };
+		A36969CF1E90585E00990A43 /* MPOSimilarFace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOSimilarFace.h; sourceTree = "<group>"; };
+		A36969D01E90585E00990A43 /* MPOSimilarFace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOSimilarFace.m; sourceTree = "<group>"; };
+		A36969D11E90585E00990A43 /* MPOTrainingStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOTrainingStatus.h; sourceTree = "<group>"; };
+		A36969D21E90585E00990A43 /* MPOTrainingStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOTrainingStatus.m; sourceTree = "<group>"; };
+		A36969D31E90585E00990A43 /* MPOVerifyResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOVerifyResult.h; sourceTree = "<group>"; };
+		A36969D41E90585E00990A43 /* MPOVerifyResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOVerifyResult.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +194,7 @@
 		A359267C1E9006D60048BDEB = {
 			isa = PBXGroup;
 			children = (
+				A369699E1E90585000990A43 /* Face API */,
 				A35926A41E9042A00048BDEB /* AFNetworking.xcodeproj */,
 				A35926871E9006D60048BDEB /* Smile */,
 				A35926861E9006D60048BDEB /* Products */,
@@ -168,6 +240,61 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		A369699E1E90585000990A43 /* Face API */ = {
+			isa = PBXGroup;
+			children = (
+				A36969A61E90585E00990A43 /* MPOAddPersistedFaceResult.h */,
+				A36969A71E90585E00990A43 /* MPOAddPersistedFaceResult.m */,
+				A36969A81E90585E00990A43 /* MPOCandidate.h */,
+				A36969A91E90585E00990A43 /* MPOCandidate.m */,
+				A36969AA1E90585E00990A43 /* MPOCreatePersonResult.h */,
+				A36969AB1E90585E00990A43 /* MPOCreatePersonResult.m */,
+				A36969AC1E90585E00990A43 /* MPOFace.h */,
+				A36969AD1E90585E00990A43 /* MPOFace.m */,
+				A36969AE1E90585E00990A43 /* MPOFaceAttributes.h */,
+				A36969AF1E90585E00990A43 /* MPOFaceAttributes.m */,
+				A36969B01E90585E00990A43 /* MPOFaceEmotion.h */,
+				A36969B11E90585E00990A43 /* MPOFaceEmotion.m */,
+				A36969B21E90585E00990A43 /* MPOFaceFeatureCoordinate.h */,
+				A36969B31E90585E00990A43 /* MPOFaceFeatureCoordinate.m */,
+				A36969B41E90585E00990A43 /* MPOFaceHeadPose.h */,
+				A36969B51E90585E00990A43 /* MPOFaceHeadPose.m */,
+				A36969B61E90585E00990A43 /* MPOFaceLandmarks.h */,
+				A36969B71E90585E00990A43 /* MPOFaceLandmarks.m */,
+				A36969B81E90585E00990A43 /* MPOFaceList.h */,
+				A36969B91E90585E00990A43 /* MPOFaceList.m */,
+				A36969BA1E90585E00990A43 /* MPOFaceListMetadata.h */,
+				A36969BB1E90585E00990A43 /* MPOFaceListMetadata.m */,
+				A36969BC1E90585E00990A43 /* MPOFaceMetadata.h */,
+				A36969BD1E90585E00990A43 /* MPOFaceMetadata.m */,
+				A36969BE1E90585E00990A43 /* MPOFaceRectangle.h */,
+				A36969BF1E90585E00990A43 /* MPOFaceRectangle.m */,
+				A36969C01E90585E00990A43 /* MPOFaceSDK.h */,
+				A36969C11E90585E00990A43 /* MPOFaceServiceClient.h */,
+				A36969C21E90585E00990A43 /* MPOFaceServiceClient.m */,
+				A36969C31E90585E00990A43 /* MPOFacialHair.h */,
+				A36969C41E90585E00990A43 /* MPOFacialHair.m */,
+				A36969C51E90585E00990A43 /* MPOGroupResult.h */,
+				A36969C61E90585E00990A43 /* MPOGroupResult.m */,
+				A36969C71E90585E00990A43 /* MPOIdentifyResult.h */,
+				A36969C81E90585E00990A43 /* MPOIdentifyResult.m */,
+				A36969C91E90585E00990A43 /* MPOPerson.h */,
+				A36969CA1E90585E00990A43 /* MPOPerson.m */,
+				A36969CB1E90585E00990A43 /* MPOPersonFace.h */,
+				A36969CC1E90585E00990A43 /* MPOPersonFace.m */,
+				A36969CD1E90585E00990A43 /* MPOPersonGroup.h */,
+				A36969CE1E90585E00990A43 /* MPOPersonGroup.m */,
+				A36969CF1E90585E00990A43 /* MPOSimilarFace.h */,
+				A36969D01E90585E00990A43 /* MPOSimilarFace.m */,
+				A36969D11E90585E00990A43 /* MPOTrainingStatus.h */,
+				A36969D21E90585E00990A43 /* MPOTrainingStatus.m */,
+				A36969D31E90585E00990A43 /* MPOVerifyResult.h */,
+				A36969D41E90585E00990A43 /* MPOVerifyResult.m */,
+				A36969A51E90585D00990A43 /* Smile-Bridging-Header.h */,
+			);
+			name = "Face API";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -203,6 +330,7 @@
 					A35926841E9006D60048BDEB = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 7H68AA7VPW;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -301,12 +429,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A36969D51E90585E00990A43 /* MPOAddPersistedFaceResult.m in Sources */,
+				A36969E81E90585E00990A43 /* MPOPersonGroup.m in Sources */,
+				A36969EA1E90585E00990A43 /* MPOTrainingStatus.m in Sources */,
+				A36969DA1E90585E00990A43 /* MPOFaceEmotion.m in Sources */,
+				A36969D81E90585E00990A43 /* MPOFace.m in Sources */,
+				A36969D91E90585E00990A43 /* MPOFaceAttributes.m in Sources */,
+				A36969E31E90585E00990A43 /* MPOFacialHair.m in Sources */,
+				A36969EB1E90585E00990A43 /* MPOVerifyResult.m in Sources */,
+				A36969E01E90585E00990A43 /* MPOFaceMetadata.m in Sources */,
 				A359269D1E900B840048BDEB /* Post.swift in Sources */,
+				A36969DF1E90585E00990A43 /* MPOFaceListMetadata.m in Sources */,
+				A36969D61E90585E00990A43 /* MPOCandidate.m in Sources */,
 				A35926A11E90222C0048BDEB /* CameraViewController.swift in Sources */,
+				A36969E11E90585E00990A43 /* MPOFaceRectangle.m in Sources */,
 				A359269B1E900B030048BDEB /* PostList.swift in Sources */,
 				A359269F1E90113F0048BDEB /* GlobalPostList.swift in Sources */,
+				A36969E21E90585E00990A43 /* MPOFaceServiceClient.m in Sources */,
+				A36969DB1E90585E00990A43 /* MPOFaceFeatureCoordinate.m in Sources */,
+				A36969E71E90585E00990A43 /* MPOPersonFace.m in Sources */,
+				A36969DD1E90585E00990A43 /* MPOFaceLandmarks.m in Sources */,
+				A36969DC1E90585E00990A43 /* MPOFaceHeadPose.m in Sources */,
+				A36969E61E90585E00990A43 /* MPOPerson.m in Sources */,
+				A36969E91E90585E00990A43 /* MPOSimilarFace.m in Sources */,
+				A36969E51E90585E00990A43 /* MPOIdentifyResult.m in Sources */,
 				A35926A31E9026D90048BDEB /* CameraPageViewController.swift in Sources */,
 				A35926891E9006D60048BDEB /* AppDelegate.swift in Sources */,
+				A36969D71E90585E00990A43 /* MPOCreatePersonResult.m in Sources */,
+				A36969DE1E90585E00990A43 /* MPOFaceList.m in Sources */,
+				A36969E41E90585E00990A43 /* MPOGroupResult.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,11 +586,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 7H68AA7VPW;
 				INFOPLIST_FILE = Smile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.harttakeslahacks.Smile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Smile-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -448,11 +602,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 7H68AA7VPW;
 				INFOPLIST_FILE = Smile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.harttakeslahacks.Smile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Smile-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

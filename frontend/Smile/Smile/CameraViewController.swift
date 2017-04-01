@@ -59,25 +59,31 @@ class CameraViewController : UIViewController, AVCapturePhotoCaptureDelegate {
     
     func capture(_ captureOutput: AVCapturePhotoOutput, didFinishProcessingPhotoSampleBuffer photoSampleBuffer: CMSampleBuffer?, previewPhotoSampleBuffer: CMSampleBuffer?, resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Error?) {
         
-        /*let imageBuffer = CMSampleBufferGetImageBuffer(photoSampleBuffer!)!
-        let gpuImage = CIImage(cvImageBuffer: imageBuffer)
-        let image = UIImage(ciImage: gpuImage)
-        
-        //do something with image
-        let jpeg = UIImageJPEGRepresentation(image, 0.9)!*/
-        
         let jpeg = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: photoSampleBuffer!, previewPhotoSampleBuffer: nil)!
         
-        manager.post("/api/posts", parameters: nil, constructingBodyWith: {formData in
-            formData.appendPart(withFileData: jpeg, name: "file", fileName: "file", mimeType: "image/jpg")
-            formData.appendPart(withForm: "0".data(using: .utf8)!, name: "num_faces")
-            formData.appendPart(withForm: UUID().uuidString.data(using: .utf8)!, name: "uid")
-            formData.appendPart(withForm: UUID().uuidString.data(using: .utf8)!, name: "uuid")
-        }, success: { (_, _) in
-            print("success :)")
-        }) { (_, error) in
-            print("failure :( error=\(error)")
-        }
+        let client = MPOFaceServiceClient(subscriptionKey: "a154bd9a80564b6da75920a78c537d59")
+        
+        client?.detect(with: jpeg, returnFaceId: true, returnFaceLandmarks: true, returnFaceAttributes: [NSNumber(value: MPOFaceAttributeTypeSmile.rawValuew)], completionBlock: { (faces, error) in
+            if let faces = faces {
+                
+                print("Found \(faces.count) faces")
+                
+                self.manager.post("/api/posts", parameters: nil, constructingBodyWith: {formData in
+                    formData.appendPart(withFileData: jpeg, name: "file", fileName: "file", mimeType: "image/jpg")
+                    formData.appendPart(withForm: "0".data(using: .utf8)!, name: "num_faces")
+                    formData.appendPart(withForm: UUID().uuidString.data(using: .utf8)!, name: "uid")
+                    formData.appendPart(withForm: UUID().uuidString.data(using: .utf8)!, name: "uuid")
+                }, success: { (_, _) in
+                    print("success :)")
+                }) { (_, error) in
+                    print("failure :( error=\(error)")
+                }
+            } else {
+                print(error ?? "unknown error")
+            }
+        })
+        
+        
         
     }
     
