@@ -6,7 +6,7 @@ var mkdirp = require('mkdirp');
 var conn = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
-  password : 'asdf',
+  password : '',
   database : 'smilethursday'
 });
 

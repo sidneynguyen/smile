@@ -9,6 +9,5 @@
 import Foundation
 
 protocol PostList {
-    func getNumPosts(callbacK: (Int?)->Void)
-    func getPost(number : Int, callback: (Post?)->Void)
+    func getPosts(callback: @escaping ([Post]?)->Void)
 }
