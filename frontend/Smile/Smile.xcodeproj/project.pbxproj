@@ -14,7 +14,84 @@
 		A359269B1E900B030048BDEB /* PostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A359269A1E900B030048BDEB /* PostList.swift */; };
 		A359269D1E900B840048BDEB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A359269C1E900B840048BDEB /* Post.swift */; };
 		A359269F1E90113F0048BDEB /* GlobalPostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A359269E1E90113F0048BDEB /* GlobalPostList.swift */; };
+		A35926A11E90222C0048BDEB /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35926A01E90222C0048BDEB /* CameraViewController.swift */; };
+		A35926A31E9026D90048BDEB /* CameraPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35926A21E9026D90048BDEB /* CameraPageViewController.swift */; };
+		A35926BC1E9042B30048BDEB /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A35926AF1E9042A10048BDEB /* AFNetworking.framework */; };
+		A35926BE1E9043060048BDEB /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A35926AF1E9042A10048BDEB /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A35926AE1E9042A10048BDEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A35926A41E9042A00048BDEB /* AFNetworking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 299522391BBF104D00859F49;
+			remoteInfo = "AFNetworking iOS";
+		};
+		A35926B01E9042A10048BDEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A35926A41E9042A00048BDEB /* AFNetworking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 299522651BBF129200859F49;
+			remoteInfo = "AFNetworking watchOS";
+		};
+		A35926B21E9042A10048BDEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A35926A41E9042A00048BDEB /* AFNetworking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 299522771BBF136400859F49;
+			remoteInfo = "AFNetworking OS X";
+		};
+		A35926B41E9042A10048BDEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A35926A41E9042A00048BDEB /* AFNetworking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2987B0A51BC408A200179A4C;
+			remoteInfo = "AFNetworking tvOS";
+		};
+		A35926B61E9042A10048BDEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A35926A41E9042A00048BDEB /* AFNetworking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 298D7C3B1BC2C79500FD3B3E;
+			remoteInfo = "AFNetworking iOS Tests";
+		};
+		A35926B81E9042A10048BDEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A35926A41E9042A00048BDEB /* AFNetworking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 298D7C4A1BC2C7B200FD3B3E;
+			remoteInfo = "AFNetworking Mac OS X Tests";
+		};
+		A35926BA1E9042A10048BDEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A35926A41E9042A00048BDEB /* AFNetworking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2987B0AE1BC408A200179A4C;
+			remoteInfo = "AFNetworking tvOS Tests";
+		};
+		A35926BF1E9043060048BDEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A35926A41E9042A00048BDEB /* AFNetworking.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 299522381BBF104D00859F49;
+			remoteInfo = "AFNetworking iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A35926C11E9043070048BDEB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A35926BE1E9043060048BDEB /* AFNetworking.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A35926851E9006D60048BDEB /* Smile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smile.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +103,9 @@
 		A359269A1E900B030048BDEB /* PostList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostList.swift; sourceTree = "<group>"; };
 		A359269C1E900B840048BDEB /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		A359269E1E90113F0048BDEB /* GlobalPostList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalPostList.swift; sourceTree = "<group>"; };
+		A35926A01E90222C0048BDEB /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		A35926A21E9026D90048BDEB /* CameraPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraPageViewController.swift; sourceTree = "<group>"; };
+		A35926A41E9042A00048BDEB /* AFNetworking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AFNetworking.xcodeproj; path = "../../../Downloads/AFNetworking-master/AFNetworking.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A35926BC1E9042B30048BDEB /* AFNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +123,7 @@
 		A359267C1E9006D60048BDEB = {
 			isa = PBXGroup;
 			children = (
+				A35926A41E9042A00048BDEB /* AFNetworking.xcodeproj */,
 				A35926871E9006D60048BDEB /* Smile */,
 				A35926861E9006D60048BDEB /* Products */,
 			);
@@ -61,6 +143,8 @@
 				A35926881E9006D60048BDEB /* AppDelegate.swift */,
 				A359269A1E900B030048BDEB /* PostList.swift */,
 				A359269C1E900B840048BDEB /* Post.swift */,
+				A35926A01E90222C0048BDEB /* CameraViewController.swift */,
+				A35926A21E9026D90048BDEB /* CameraPageViewController.swift */,
 				A359269E1E90113F0048BDEB /* GlobalPostList.swift */,
 				A359268C1E9006D60048BDEB /* Main.storyboard */,
 				A359268F1E9006D60048BDEB /* Assets.xcassets */,
@@ -68,6 +152,20 @@
 				A35926941E9006D60048BDEB /* Info.plist */,
 			);
 			path = Smile;
+			sourceTree = "<group>";
+		};
+		A35926A51E9042A00048BDEB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A35926AF1E9042A10048BDEB /* AFNetworking.framework */,
+				A35926B11E9042A10048BDEB /* AFNetworking.framework */,
+				A35926B31E9042A10048BDEB /* AFNetworking.framework */,
+				A35926B51E9042A10048BDEB /* AFNetworking.framework */,
+				A35926B71E9042A10048BDEB /* AFNetworking iOS Tests.xctest */,
+				A35926B91E9042A10048BDEB /* AFNetworking Mac OS X Tests.xctest */,
+				A35926BB1E9042A10048BDEB /* AFNetworking tvOS Tests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,10 +178,12 @@
 				A35926811E9006D60048BDEB /* Sources */,
 				A35926821E9006D60048BDEB /* Frameworks */,
 				A35926831E9006D60048BDEB /* Resources */,
+				A35926C11E9043070048BDEB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A35926C01E9043060048BDEB /* PBXTargetDependency */,
 			);
 			name = Smile;
 			productName = Smile;
@@ -102,6 +202,7 @@
 				TargetAttributes = {
 					A35926841E9006D60048BDEB = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 7H68AA7VPW;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -117,12 +218,70 @@
 			mainGroup = A359267C1E9006D60048BDEB;
 			productRefGroup = A35926861E9006D60048BDEB /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A35926A51E9042A00048BDEB /* Products */;
+					ProjectRef = A35926A41E9042A00048BDEB /* AFNetworking.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A35926841E9006D60048BDEB /* Smile */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A35926AF1E9042A10048BDEB /* AFNetworking.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AFNetworking.framework;
+			remoteRef = A35926AE1E9042A10048BDEB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A35926B11E9042A10048BDEB /* AFNetworking.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AFNetworking.framework;
+			remoteRef = A35926B01E9042A10048BDEB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A35926B31E9042A10048BDEB /* AFNetworking.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AFNetworking.framework;
+			remoteRef = A35926B21E9042A10048BDEB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A35926B51E9042A10048BDEB /* AFNetworking.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AFNetworking.framework;
+			remoteRef = A35926B41E9042A10048BDEB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A35926B71E9042A10048BDEB /* AFNetworking iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "AFNetworking iOS Tests.xctest";
+			remoteRef = A35926B61E9042A10048BDEB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A35926B91E9042A10048BDEB /* AFNetworking Mac OS X Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "AFNetworking Mac OS X Tests.xctest";
+			remoteRef = A35926B81E9042A10048BDEB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A35926BB1E9042A10048BDEB /* AFNetworking tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "AFNetworking tvOS Tests.xctest";
+			remoteRef = A35926BA1E9042A10048BDEB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A35926831E9006D60048BDEB /* Resources */ = {
@@ -143,13 +302,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				A359269D1E900B840048BDEB /* Post.swift in Sources */,
+				A35926A11E90222C0048BDEB /* CameraViewController.swift in Sources */,
 				A359269B1E900B030048BDEB /* PostList.swift in Sources */,
 				A359269F1E90113F0048BDEB /* GlobalPostList.swift in Sources */,
+				A35926A31E9026D90048BDEB /* CameraPageViewController.swift in Sources */,
 				A35926891E9006D60048BDEB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A35926C01E9043060048BDEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "AFNetworking iOS";
+			targetProxy = A35926BF1E9043060048BDEB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A359268C1E9006D60048BDEB /* Main.storyboard */ = {
@@ -266,6 +435,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7H68AA7VPW;
 				INFOPLIST_FILE = Smile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.harttakeslahacks.Smile;
@@ -278,6 +448,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7H68AA7VPW;
 				INFOPLIST_FILE = Smile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.harttakeslahacks.Smile;
@@ -305,6 +476,7 @@
 				A35926991E9006D60048BDEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

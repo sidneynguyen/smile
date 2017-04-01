@@ -7,6 +7,7 @@
 //
 
 import Foundation
+<<<<<<< HEAD
 
 extension Dictionary {
     func get<Result>(casters: [(keys: [Key], transformation: (Any?) -> Any?)], block: ([Key : Any]) -> Result) -> Result? {
@@ -72,3 +73,5 @@ class GlobalPostList : PostList {
         }
     }
 }
+=======
+>>>>>>> a5328350424537d550744b4234b3953e62b09bdb
