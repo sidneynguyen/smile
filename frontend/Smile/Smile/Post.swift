@@ -20,14 +20,12 @@ class Post {
     
     private var image : UIImage?
     
-    let urlSession = URLSession(configuration: .default)
-    
-    func getImage(callback: @escaping (UIImage?)->Void) {
+    func getImage(urlSession: URLSession, callback: @escaping (UIImage?)->Void) {
         if let result = image {
             callback(result)
         } else {
             //make a request to get the image
-            let request = URLRequest(url: URL(string: "/image&id=\(imageID)", relativeTo: site)!)
+            let request = URLRequest(url: URL(string: "/image?id=\(imageID)", relativeTo: site)!)
             
             urlSession.dataTask(with: request) {data, _, _ in
                 if let data = data {
