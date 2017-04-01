@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-let site : URL = URL(string: "http://172.20.10.7/api")!
+let site : URL = URL(string: "http://172.20.10.7:3000/api/")!
 
 class Post {
     let uuid : String

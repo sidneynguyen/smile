@@ -68,12 +68,15 @@ class CameraViewController : UIViewController, AVCapturePhotoCaptureDelegate {
         
         let jpeg = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: photoSampleBuffer!, previewPhotoSampleBuffer: nil)!
         
-        manager.post("/posts", parameters: nil, constructingBodyWith: {formData in
-            formData.appendPart(withForm: jpeg, name: "file")
+        manager.post("/api/posts", parameters: nil, constructingBodyWith: {formData in
+            formData.appendPart(withFileData: jpeg, name: "file", fileName: "file", mimeType: "image/jpg")
+            formData.appendPart(withForm: "0".data(using: .utf8)!, name: "num_faces")
+            formData.appendPart(withForm: UUID().uuidString.data(using: .utf8)!, name: "uid")
+            formData.appendPart(withForm: UUID().uuidString.data(using: .utf8)!, name: "uuid")
         }, success: { (_, _) in
             print("success :)")
-        }) { (_, _) in
-            print("failure :(")
+        }) { (_, error) in
+            print("failure :( error=\(error)")
         }
         
     }
