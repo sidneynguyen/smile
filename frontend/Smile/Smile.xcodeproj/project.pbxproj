@@ -41,6 +41,8 @@
 		A36969E91E90585E00990A43 /* MPOSimilarFace.m in Sources */ = {isa = PBXBuildFile; fileRef = A36969D01E90585E00990A43 /* MPOSimilarFace.m */; };
 		A36969EA1E90585E00990A43 /* MPOTrainingStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = A36969D21E90585E00990A43 /* MPOTrainingStatus.m */; };
 		A36969EB1E90585E00990A43 /* MPOVerifyResult.m in Sources */ = {isa = PBXBuildFile; fileRef = A36969D41E90585E00990A43 /* MPOVerifyResult.m */; };
+		A36969ED1E905F1A00990A43 /* StaticPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36969EC1E905F1A00990A43 /* StaticPageViewController.swift */; };
+		A36969EF1E905FBB00990A43 /* MasterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36969EE1E905FBB00990A43 /* MasterPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,6 +179,8 @@
 		A36969D21E90585E00990A43 /* MPOTrainingStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOTrainingStatus.m; sourceTree = "<group>"; };
 		A36969D31E90585E00990A43 /* MPOVerifyResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPOVerifyResult.h; sourceTree = "<group>"; };
 		A36969D41E90585E00990A43 /* MPOVerifyResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOVerifyResult.m; sourceTree = "<group>"; };
+		A36969EC1E905F1A00990A43 /* StaticPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticPageViewController.swift; sourceTree = "<group>"; };
+		A36969EE1E905FBB00990A43 /* MasterPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +221,8 @@
 				A359269C1E900B840048BDEB /* Post.swift */,
 				A35926A01E90222C0048BDEB /* CameraViewController.swift */,
 				A35926A21E9026D90048BDEB /* CameraPageViewController.swift */,
+				A36969EE1E905FBB00990A43 /* MasterPageViewController.swift */,
+				A36969EC1E905F1A00990A43 /* StaticPageViewController.swift */,
 				A359269E1E90113F0048BDEB /* GlobalPostList.swift */,
 				A359268C1E9006D60048BDEB /* Main.storyboard */,
 				A359268F1E9006D60048BDEB /* Assets.xcassets */,
@@ -432,6 +438,7 @@
 				A36969D51E90585E00990A43 /* MPOAddPersistedFaceResult.m in Sources */,
 				A36969E81E90585E00990A43 /* MPOPersonGroup.m in Sources */,
 				A36969EA1E90585E00990A43 /* MPOTrainingStatus.m in Sources */,
+				A36969ED1E905F1A00990A43 /* StaticPageViewController.swift in Sources */,
 				A36969DA1E90585E00990A43 /* MPOFaceEmotion.m in Sources */,
 				A36969D81E90585E00990A43 /* MPOFace.m in Sources */,
 				A36969D91E90585E00990A43 /* MPOFaceAttributes.m in Sources */,
@@ -458,6 +465,7 @@
 				A36969D71E90585E00990A43 /* MPOCreatePersonResult.m in Sources */,
 				A36969DE1E90585E00990A43 /* MPOFaceList.m in Sources */,
 				A36969E41E90585E00990A43 /* MPOGroupResult.m in Sources */,
+				A36969EF1E905FBB00990A43 /* MasterPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

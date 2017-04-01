@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pCf-7S-cnG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2cs-8g-YzY">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,18 +9,26 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Page View Controller-->
+        <!--Camera Page View Controller-->
         <scene sceneID="HEq-BW-4xP">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="B1H-KV-mQp" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="CameraPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="vertical" spineLocation="none" id="B1H-KV-mQp" customClass="CameraPageViewController" customModule="Smile" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xCF-TC-Jhg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="410" y="142"/>
         </scene>
+        <!--Master Page View Controller-->
+        <scene sceneID="4P3-Dr-9jP">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="2cs-8g-YzY" customClass="MasterPageViewController" customModule="Smile" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="94k-X3-XYq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="972" y="606"/>
+        </scene>
         <!--Camera View Controller-->
         <scene sceneID="WlI-j3-quP">
             <objects>
-                <viewController id="pCf-7S-cnG" customClass="CameraViewController" customModule="Smile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CameraViewController" id="pCf-7S-cnG" customClass="CameraViewController" customModule="Smile" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LdX-ej-CCN"/>
                         <viewControllerLayoutGuide type="bottom" id="c7C-uu-Ogt"/>
@@ -51,7 +59,7 @@
         <!--View Controller-->
         <scene sceneID="hso-GV-Hdj">
             <objects>
-                <viewController id="6k7-7f-fUU" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemoriesViewController" id="6k7-7f-fUU" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZbO-eP-BF7"/>
                         <viewControllerLayoutGuide type="bottom" id="UQf-aK-emS"/>
@@ -62,9 +70,10 @@
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WXd-7c-24b">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="WXd-7c-24b" firstAttribute="leading" secondItem="H94-Hk-DZo" secondAttribute="leading" id="3Qz-fM-rZH"/>
                             <constraint firstAttribute="trailing" secondItem="WXd-7c-24b" secondAttribute="trailing" id="DIg-gi-shJ"/>
@@ -76,6 +85,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xXx-RT-EkG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2212" y="94.902548725637189"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RDB-iA-Dg7">
+            <objects>
+                <viewController storyboardIdentifier="GlobalFeedViewController" id="5NS-io-6gP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="flA-k8-vY4"/>
+                        <viewControllerLayoutGuide type="bottom" id="y6W-fA-djZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xNy-d1-bue">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="auQ-aw-S8h">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="y6W-fA-djZ" firstAttribute="top" secondItem="auQ-aw-S8h" secondAttribute="bottom" id="CS2-hn-Qpo"/>
+                            <constraint firstItem="auQ-aw-S8h" firstAttribute="leading" secondItem="xNy-d1-bue" secondAttribute="leading" id="UKR-xe-omS"/>
+                            <constraint firstAttribute="trailing" secondItem="auQ-aw-S8h" secondAttribute="trailing" id="n8P-Wm-G5c"/>
+                            <constraint firstItem="auQ-aw-S8h" firstAttribute="top" secondItem="xNy-d1-bue" secondAttribute="top" id="rNS-Nw-tLY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jcq-2x-fwu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2655" y="385"/>
         </scene>
     </scenes>
 </document>

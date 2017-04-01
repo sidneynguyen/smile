@@ -47,6 +47,7 @@ class CameraViewController : UIViewController, AVCapturePhotoCaptureDelegate {
         view.layer.addSublayer(layer)
         
         layer.frame = view.layer.bounds
+        layer.zPosition = -0.01
     }
     
     @IBAction func takePhoto(_ sender: UIButton) {
@@ -63,7 +64,7 @@ class CameraViewController : UIViewController, AVCapturePhotoCaptureDelegate {
         
         let client = MPOFaceServiceClient(subscriptionKey: "a154bd9a80564b6da75920a78c537d59")
         
-        client?.detect(with: jpeg, returnFaceId: true, returnFaceLandmarks: true, returnFaceAttributes: [NSNumber(value: MPOFaceAttributeTypeSmile.rawValuew)], completionBlock: { (faces, error) in
+        client?.detect(with: jpeg, returnFaceId: true, returnFaceLandmarks: true, returnFaceAttributes: [NSNumber(value: MPOFaceAttributeTypeSmile.rawValue)], completionBlock: { (faces, error) in
             if let faces = faces {
                 
                 print("Found \(faces.count) faces")

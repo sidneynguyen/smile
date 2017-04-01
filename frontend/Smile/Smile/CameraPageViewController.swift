@@ -8,15 +8,15 @@
 
 import UIKit
 
-class CameraPageViewController : UIPageViewController {
+class CameraPageViewController : StaticPageViewController {
     
-    override func viewDidLoad() {
-        setViewControllers([
-            
-            storyboard!.instantiateViewController(withIdentifier: "CameraViewController"),
-            storyboard!.instantiateViewController(withIdentifier: "MemoriesViewController")
-            
-            ], direction: .forward, animated: false, completion: nil)
+    override func loadViewControllers() -> [UIViewController] {
+        return [
+            self.storyboard!.instantiateViewController(withIdentifier: "CameraViewController"),
+            self.storyboard!.instantiateViewController(withIdentifier: "MemoriesViewController")
+        ]
     }
+    
+    override var initialIndex: Int { return 0 }
     
 }
