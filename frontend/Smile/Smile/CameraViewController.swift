@@ -50,7 +50,7 @@ class CameraViewController : UIViewController, AVCapturePhotoCaptureDelegate {
     }
     
     @IBAction func takePhoto(_ sender: UIButton) {
-        let settings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecJPEGs])
+        let settings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecJPEG])
         settings.isHighResolutionPhotoEnabled = true
         photoCapture.capturePhoto(with: settings, delegate: self)
     }
