@@ -43,6 +43,10 @@
 		A36969EB1E90585E00990A43 /* MPOVerifyResult.m in Sources */ = {isa = PBXBuildFile; fileRef = A36969D41E90585E00990A43 /* MPOVerifyResult.m */; };
 		A36969ED1E905F1A00990A43 /* StaticPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36969EC1E905F1A00990A43 /* StaticPageViewController.swift */; };
 		A36969EF1E905FBB00990A43 /* MasterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36969EE1E905FBB00990A43 /* MasterPageViewController.swift */; };
+		A36969F11E9062C400990A43 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36969F01E9062C400990A43 /* FeedViewController.swift */; };
+		A3696A001E9064CD00990A43 /* CellGenerate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36969F71E9064CD00990A43 /* CellGenerate.swift */; };
+		A3696A031E9064CD00990A43 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A36969FA1E9064CD00990A43 /* ImageCell.xib */; };
+		A3696A071E90729C00990A43 /* GlobalFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3696A061E90729C00990A43 /* GlobalFeedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -181,6 +185,10 @@
 		A36969D41E90585E00990A43 /* MPOVerifyResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPOVerifyResult.m; sourceTree = "<group>"; };
 		A36969EC1E905F1A00990A43 /* StaticPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticPageViewController.swift; sourceTree = "<group>"; };
 		A36969EE1E905FBB00990A43 /* MasterPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterPageViewController.swift; sourceTree = "<group>"; };
+		A36969F01E9062C400990A43 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		A36969F71E9064CD00990A43 /* CellGenerate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellGenerate.swift; sourceTree = "<group>"; };
+		A36969FA1E9064CD00990A43 /* ImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		A3696A061E90729C00990A43 /* GlobalFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFeedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +224,7 @@
 		A35926871E9006D60048BDEB /* Smile */ = {
 			isa = PBXGroup;
 			children = (
+				A3696A051E9064F200990A43 /* Custom Table Cells */,
 				A35926881E9006D60048BDEB /* AppDelegate.swift */,
 				A359269A1E900B030048BDEB /* PostList.swift */,
 				A359269C1E900B840048BDEB /* Post.swift */,
@@ -223,6 +232,8 @@
 				A35926A21E9026D90048BDEB /* CameraPageViewController.swift */,
 				A36969EE1E905FBB00990A43 /* MasterPageViewController.swift */,
 				A36969EC1E905F1A00990A43 /* StaticPageViewController.swift */,
+				A36969F01E9062C400990A43 /* FeedViewController.swift */,
+				A3696A061E90729C00990A43 /* GlobalFeedViewController.swift */,
 				A359269E1E90113F0048BDEB /* GlobalPostList.swift */,
 				A359268C1E9006D60048BDEB /* Main.storyboard */,
 				A359268F1E9006D60048BDEB /* Assets.xcassets */,
@@ -299,6 +310,15 @@
 				A36969A51E90585D00990A43 /* Smile-Bridging-Header.h */,
 			);
 			name = "Face API";
+			sourceTree = "<group>";
+		};
+		A3696A051E9064F200990A43 /* Custom Table Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A36969F71E9064CD00990A43 /* CellGenerate.swift */,
+				A36969FA1E9064CD00990A43 /* ImageCell.xib */,
+			);
+			name = "Custom Table Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -424,6 +444,7 @@
 			files = (
 				A35926931E9006D60048BDEB /* LaunchScreen.storyboard in Resources */,
 				A35926901E9006D60048BDEB /* Assets.xcassets in Resources */,
+				A3696A031E9064CD00990A43 /* ImageCell.xib in Resources */,
 				A359268E1E9006D60048BDEB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,12 +472,14 @@
 				A35926A11E90222C0048BDEB /* CameraViewController.swift in Sources */,
 				A36969E11E90585E00990A43 /* MPOFaceRectangle.m in Sources */,
 				A359269B1E900B030048BDEB /* PostList.swift in Sources */,
+				A3696A001E9064CD00990A43 /* CellGenerate.swift in Sources */,
 				A359269F1E90113F0048BDEB /* GlobalPostList.swift in Sources */,
 				A36969E21E90585E00990A43 /* MPOFaceServiceClient.m in Sources */,
 				A36969DB1E90585E00990A43 /* MPOFaceFeatureCoordinate.m in Sources */,
 				A36969E71E90585E00990A43 /* MPOPersonFace.m in Sources */,
 				A36969DD1E90585E00990A43 /* MPOFaceLandmarks.m in Sources */,
 				A36969DC1E90585E00990A43 /* MPOFaceHeadPose.m in Sources */,
+				A3696A071E90729C00990A43 /* GlobalFeedViewController.swift in Sources */,
 				A36969E61E90585E00990A43 /* MPOPerson.m in Sources */,
 				A36969E91E90585E00990A43 /* MPOSimilarFace.m in Sources */,
 				A36969E51E90585E00990A43 /* MPOIdentifyResult.m in Sources */,
@@ -464,6 +487,7 @@
 				A35926891E9006D60048BDEB /* AppDelegate.swift in Sources */,
 				A36969D71E90585E00990A43 /* MPOCreatePersonResult.m in Sources */,
 				A36969DE1E90585E00990A43 /* MPOFaceList.m in Sources */,
+				A36969F11E9062C400990A43 /* FeedViewController.swift in Sources */,
 				A36969E41E90585E00990A43 /* MPOGroupResult.m in Sources */,
 				A36969EF1E905FBB00990A43 /* MasterPageViewController.swift in Sources */,
 			);

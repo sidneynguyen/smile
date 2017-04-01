@@ -9,13 +9,13 @@
 import Foundation
 import UIKit
 
-let site : URL = URL(string: "http://172.20.10.7:3000/api/")!
+let site : URL = URL(string: "http://172.20.10.7:3000/")!
 
 class Post {
     let uuid : String
     let uid : String
     let date : Date
-    let imageID : String
+    let imageID : Int
     let numFaces : Int
     
     private var image : UIImage?
@@ -25,19 +25,24 @@ class Post {
             callback(result)
         } else {
             //make a request to get the image
-            let request = URLRequest(url: URL(string: "/image?id=\(imageID)", relativeTo: site)!)
+            let request = URLRequest(url: URL(string: "/api/image?image_id=\(imageID)", relativeTo: site)!)
             
-            urlSession.dataTask(with: request) {data, _, _ in
-                if let data = data {
-                    callback(UIImage(data: data))
-                } else {
-                    callback(nil)
+            let task = urlSession.dataTask(with: request) {data, resp, err in
+                DispatchQueue.main.async {
+                    if let data = data {
+                        self.image = UIImage(data: data)
+                        callback(self.image)
+                    } else {
+                        callback(nil)
+                    }
                 }
             }
+            
+            task.resume()
         }
     }
     
-    init(uuid: String, uid: String, date: Date, imageID: String, numFaces: Int) {
+    init(uuid: String, uid: String, date: Date, imageID: Int, numFaces: Int) {
         self.uuid = uuid
         self.uid = uid
         self.date = date
