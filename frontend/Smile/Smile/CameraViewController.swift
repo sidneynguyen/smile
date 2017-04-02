@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import AFNetworking
+import FBSDKLoginKit
 
 class CameraViewController : UIViewController, AVCapturePhotoCaptureDelegate {
     
@@ -57,6 +58,23 @@ class CameraViewController : UIViewController, AVCapturePhotoCaptureDelegate {
         layer.zPosition = -0.01
         
         hasCaptured = false
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        //If the view loads and we're not logged in, open the login view
+        if !loggedIn {
+            let loginViewController = storyboard!.instantiateViewController(withIdentifier: "LoginViewController")
+            DispatchQueue.main.async {self.showDetailViewController(loginViewController, sender: self)}
+        }
+    }
+    
+    var loggedIn : Bool {
+        
+        userID = FBSDKAccessToken.current()?.userID
+        
+        return userID != nil
     }
     
     @IBAction func takePhoto(_ sender: UIButton) {
@@ -115,7 +133,7 @@ class CameraViewController : UIViewController, AVCapturePhotoCaptureDelegate {
         self.manager.post("/api/posts", parameters: nil, constructingBodyWith: {formData in
             formData.appendPart(withFileData: self.capturedImageJPEG, name: "file", fileName: "file", mimeType: "image/jpg")
             formData.appendPart(withForm: "0".data(using: .utf8)!, name: "num_faces")
-            formData.appendPart(withForm: UUID().uuidString.data(using: .utf8)!, name: "uid")
+            formData.appendPart(withForm: userID.data(using: .utf8)!, name: "uid")
             formData.appendPart(withForm: UUID().uuidString.data(using: .utf8)!, name: "uuid")
             formData.appendPart(withForm: privacy.data(using: .utf8)!, name: "privacy")
         }, success: { (_, _) in

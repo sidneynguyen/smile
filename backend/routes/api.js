@@ -53,7 +53,7 @@ router.post('/posts/friends', function(req, res) {
 
 router.get('/posts/:uid', function(req, res) {
   var uid = req.params.uid;
-  conn.query("SELECT * FROM Posts WHERE fbId='" + uid + "' ORDER BY date", function(err, results) {
+  conn.query("SELECT * FROM Posts WHERE uid='" + uid + "' ORDER BY date", function(err, results) {
     if (err) { throw err; }
     res.json(results);
   });

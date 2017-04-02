@@ -47,6 +47,15 @@
 		A3696A001E9064CD00990A43 /* CellGenerate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36969F71E9064CD00990A43 /* CellGenerate.swift */; };
 		A3696A031E9064CD00990A43 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A36969FA1E9064CD00990A43 /* ImageCell.xib */; };
 		A3696A071E90729C00990A43 /* GlobalFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3696A061E90729C00990A43 /* GlobalFeedViewController.swift */; };
+		A3696A0A1E908A9800990A43 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3696A081E908A9800990A43 /* FBSDKCoreKit.framework */; };
+		A3696A0B1E908A9800990A43 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3696A091E908A9800990A43 /* FBSDKLoginKit.framework */; };
+		A3696A0C1E908AC500990A43 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3696A081E908A9800990A43 /* FBSDKCoreKit.framework */; };
+		A3696A0D1E908AC500990A43 /* FBSDKCoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A3696A081E908A9800990A43 /* FBSDKCoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A3696A0E1E908AC500990A43 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3696A091E908A9800990A43 /* FBSDKLoginKit.framework */; };
+		A3696A0F1E908AC500990A43 /* FBSDKLoginKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A3696A091E908A9800990A43 /* FBSDKLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A3696A111E908AD900990A43 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3696A101E908AD900990A43 /* Bolts.framework */; };
+		A3696A131E908BA700990A43 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3696A121E908BA700990A43 /* LoginViewController.swift */; };
+		A3696A151E90910300990A43 /* UserFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3696A141E90910300990A43 /* UserFeedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +125,8 @@
 			dstSubfolderSpec = 10;
 			files = (
 				A35926BE1E9043060048BDEB /* AFNetworking.framework in Embed Frameworks */,
+				A3696A0D1E908AC500990A43 /* FBSDKCoreKit.framework in Embed Frameworks */,
+				A3696A0F1E908AC500990A43 /* FBSDKLoginKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,6 +200,11 @@
 		A36969F71E9064CD00990A43 /* CellGenerate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellGenerate.swift; sourceTree = "<group>"; };
 		A36969FA1E9064CD00990A43 /* ImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		A3696A061E90729C00990A43 /* GlobalFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFeedViewController.swift; sourceTree = "<group>"; };
+		A3696A081E908A9800990A43 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		A3696A091E908A9800990A43 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		A3696A101E908AD900990A43 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		A3696A121E908BA700990A43 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A3696A141E90910300990A43 /* UserFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFeedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +213,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A35926BC1E9042B30048BDEB /* AFNetworking.framework in Frameworks */,
+				A3696A0C1E908AC500990A43 /* FBSDKCoreKit.framework in Frameworks */,
+				A3696A0E1E908AC500990A43 /* FBSDKLoginKit.framework in Frameworks */,
+				A3696A111E908AD900990A43 /* Bolts.framework in Frameworks */,
+				A3696A0A1E908A9800990A43 /* FBSDKCoreKit.framework in Frameworks */,
+				A3696A0B1E908A9800990A43 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +231,9 @@
 				A35926A41E9042A00048BDEB /* AFNetworking.xcodeproj */,
 				A35926871E9006D60048BDEB /* Smile */,
 				A35926861E9006D60048BDEB /* Products */,
+				A3696A101E908AD900990A43 /* Bolts.framework */,
+				A3696A081E908A9800990A43 /* FBSDKCoreKit.framework */,
+				A3696A091E908A9800990A43 /* FBSDKLoginKit.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -235,6 +259,8 @@
 				A36969F01E9062C400990A43 /* FeedViewController.swift */,
 				A3696A061E90729C00990A43 /* GlobalFeedViewController.swift */,
 				A359269E1E90113F0048BDEB /* GlobalPostList.swift */,
+				A3696A141E90910300990A43 /* UserFeedViewController.swift */,
+				A3696A121E908BA700990A43 /* LoginViewController.swift */,
 				A359268C1E9006D60048BDEB /* Main.storyboard */,
 				A359268F1E9006D60048BDEB /* Assets.xcassets */,
 				A35926911E9006D60048BDEB /* LaunchScreen.storyboard */,
@@ -457,6 +483,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A36969D51E90585E00990A43 /* MPOAddPersistedFaceResult.m in Sources */,
+				A3696A151E90910300990A43 /* UserFeedViewController.swift in Sources */,
 				A36969E81E90585E00990A43 /* MPOPersonGroup.m in Sources */,
 				A36969EA1E90585E00990A43 /* MPOTrainingStatus.m in Sources */,
 				A36969ED1E905F1A00990A43 /* StaticPageViewController.swift in Sources */,
@@ -484,6 +511,7 @@
 				A36969E91E90585E00990A43 /* MPOSimilarFace.m in Sources */,
 				A36969E51E90585E00990A43 /* MPOIdentifyResult.m in Sources */,
 				A35926A31E9026D90048BDEB /* CameraPageViewController.swift in Sources */,
+				A3696A131E908BA700990A43 /* LoginViewController.swift in Sources */,
 				A35926891E9006D60048BDEB /* AppDelegate.swift in Sources */,
 				A36969D71E90585E00990A43 /* MPOCreatePersonResult.m in Sources */,
 				A36969DE1E90585E00990A43 /* MPOFaceList.m in Sources */,
@@ -620,6 +648,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 7H68AA7VPW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Smile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.harttakeslahacks.Smile;
@@ -636,6 +668,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 7H68AA7VPW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Smile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.harttakeslahacks.Smile;

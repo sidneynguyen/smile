@@ -35,8 +35,12 @@ class GlobalPostList : PostList {
     
     private let urlSession = URLSession(configuration: .default)
     
+    var apiKey : String {
+        return "/api/posts?scope=global"
+    }
+    
     func getPosts(callback: @escaping ([Post]?) -> Void) {
-        let request = URLRequest(url: URL(string: "/api/posts?scope=global", relativeTo: site)!)
+        let request = URLRequest(url: URL(string: apiKey, relativeTo: site)!)
         
         let task = urlSession.dataTask(with: request) {data, resp, error in
             
@@ -61,13 +65,9 @@ class GlobalPostList : PostList {
                 let posts = dictArray.flatMap{dict in
                     dict.get(casters: [
                         (["uuid", "uid"], {$0 as? String}),
-                        (["date"], {
-                            guard let string = $0 as? String else {return nil}
-                            return dateFormatter.date(from: string)
-                        }),
                         (["num_faces", "image_id"], {$0 as? Int})
                     ]) {dict in
-                        return Post(uuid: dict["uuid"] as! String, uid: dict["uid"] as! String, date: dict["date"] as! Date, imageID: dict["image_id"] as! Int, numFaces: dict["num_faces"] as! Int)
+                        return Post(uuid: dict["uuid"] as! String, uid: dict["uid"] as! String, imageID: dict["image_id"] as! Int, numFaces: dict["num_faces"] as! Int)
                     }
                 }
                 callback(posts)
@@ -81,4 +81,12 @@ class GlobalPostList : PostList {
         
         task.resume()
     }
+}
+
+class UserPostList : GlobalPostList {
+
+    override var apiKey: String {
+        return "/api/posts/\(userID!)"
+    }
+    
 }

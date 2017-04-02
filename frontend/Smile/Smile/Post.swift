@@ -14,7 +14,6 @@ let site : URL = URL(string: "http://172.20.10.7:3000/")!
 class Post {
     let uuid : String
     let uid : String
-    let date : Date
     let imageID : Int
     let numFaces : Int
     
@@ -42,10 +41,9 @@ class Post {
         }
     }
     
-    init(uuid: String, uid: String, date: Date, imageID: Int, numFaces: Int) {
+    init(uuid: String, uid: String, imageID: Int, numFaces: Int) {
         self.uuid = uuid
         self.uid = uid
-        self.date = date
         self.imageID = imageID
         self.numFaces = numFaces
     }
