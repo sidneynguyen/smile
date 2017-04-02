@@ -12,6 +12,11 @@ import AFNetworking
 
 class CameraViewController : UIViewController, AVCapturePhotoCaptureDelegate {
     
+    @IBOutlet weak var captureButton: UIButton!
+    @IBOutlet weak var smileCounter: UILabel!
+    @IBOutlet weak var cancelButton: UIButton!
+    
+    
     let (session, photoCapture) : (AVCaptureSession, AVCapturePhotoOutput) = {
         let session = AVCaptureSession()
         
@@ -32,7 +37,9 @@ class CameraViewController : UIViewController, AVCapturePhotoCaptureDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        session.startRunning()
+        if !hasCaptured {
+            session.startRunning()
+        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -48,12 +55,15 @@ class CameraViewController : UIViewController, AVCapturePhotoCaptureDelegate {
         
         layer.frame = view.layer.bounds
         layer.zPosition = -0.01
+        
+        hasCaptured = false
     }
     
     @IBAction func takePhoto(_ sender: UIButton) {
         let settings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecJPEG])
         settings.isHighResolutionPhotoEnabled = true
         photoCapture.capturePhoto(with: settings, delegate: self)
+        hasCaptured = true
     }
     
     let manager = AFHTTPSessionManager(baseURL: site)
@@ -61,6 +71,8 @@ class CameraViewController : UIViewController, AVCapturePhotoCaptureDelegate {
     func capture(_ captureOutput: AVCapturePhotoOutput, didFinishProcessingPhotoSampleBuffer photoSampleBuffer: CMSampleBuffer?, previewPhotoSampleBuffer: CMSampleBuffer?, resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Error?) {
         
         let jpeg = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: photoSampleBuffer!, previewPhotoSampleBuffer: nil)!
+        
+        view.layer.contents = UIImage(data: jpeg)!.cgImage!
         
         let client = MPOFaceServiceClient(subscriptionKey: "a154bd9a80564b6da75920a78c537d59")
         
@@ -88,4 +100,23 @@ class CameraViewController : UIViewController, AVCapturePhotoCaptureDelegate {
         
     }
     
+    var hasCaptured : Bool = false {
+        didSet {
+            
+            cancelButton.isHidden = !hasCaptured
+            captureButton.isHidden = hasCaptured
+            smileCounter.isHidden = !hasCaptured
+            
+            hasCaptured ? session.stopRunning() : session.startRunning()
+        }
+    }
+    
+    @IBAction func cancel(_ sender: Any) {
+        hasCaptured = false
+    }
+    
+    @IBAction func world(_ sender: Any) {
+    }
+    @IBAction func personal(_ sender: Any) {
+    }
 }

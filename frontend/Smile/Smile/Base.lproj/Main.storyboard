@@ -57,6 +57,9 @@
                                     <constraint firstAttribute="height" constant="60" id="iFb-DT-gLh"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="World"/>
+                                <connections>
+                                    <action selector="world:" destination="pCf-7S-cnG" eventType="touchUpInside" id="m4i-DO-LfO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RUM-xJ-sQ9">
                                 <rect key="frame" x="6" y="10" width="60" height="60"/>
@@ -65,6 +68,9 @@
                                     <constraint firstAttribute="height" constant="60" id="jPC-a3-zRh"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="x"/>
+                                <connections>
+                                    <action selector="cancel:" destination="pCf-7S-cnG" eventType="touchUpInside" id="bvX-DR-pJs"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R7o-I5-gdB">
                                 <rect key="frame" x="295" y="583" width="80" height="89"/>
@@ -73,7 +79,18 @@
                                     <constraint firstAttribute="width" constant="80" id="gfU-HJ-uSv"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="Arrow"/>
+                                <connections>
+                                    <action selector="personal:" destination="pCf-7S-cnG" eventType="touchUpInside" id="KlW-KA-Ner"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 Smiles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n64-EP-YKc">
+                                <rect key="frame" x="154" y="635.5" width="66" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -81,12 +98,19 @@
                             <constraint firstItem="bgS-Bp-x16" firstAttribute="centerX" secondItem="eVy-2W-2aS" secondAttribute="centerX" id="9XJ-LJ-WbM"/>
                             <constraint firstItem="RUM-xJ-sQ9" firstAttribute="top" secondItem="LdX-ej-CCN" secondAttribute="bottom" constant="-10" id="9aq-3s-uUh"/>
                             <constraint firstItem="c7C-uu-Ogt" firstAttribute="top" secondItem="R7o-I5-gdB" secondAttribute="bottom" constant="-5" id="Bjj-hc-Rzr"/>
+                            <constraint firstItem="n64-EP-YKc" firstAttribute="centerX" secondItem="eVy-2W-2aS" secondAttribute="centerX" id="Ibz-os-eOb"/>
                             <constraint firstAttribute="bottom" secondItem="Ar0-lk-xbs" secondAttribute="bottom" constant="10" id="MYW-bJ-7OB"/>
                             <constraint firstItem="RUM-xJ-sQ9" firstAttribute="leading" secondItem="eVy-2W-2aS" secondAttribute="leadingMargin" constant="-10" id="Myh-NA-mKV"/>
+                            <constraint firstItem="c7C-uu-Ogt" firstAttribute="top" secondItem="n64-EP-YKc" secondAttribute="bottom" constant="10" id="U9K-fd-BbA"/>
                             <constraint firstAttribute="trailing" secondItem="R7o-I5-gdB" secondAttribute="trailing" id="g4G-My-Xxm"/>
                             <constraint firstItem="c7C-uu-Ogt" firstAttribute="top" secondItem="bgS-Bp-x16" secondAttribute="bottom" constant="20" id="pEY-gk-82N"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="RUM-xJ-sQ9" id="lsz-oA-IAu"/>
+                        <outlet property="captureButton" destination="bgS-Bp-x16" id="41g-wX-7pD"/>
+                        <outlet property="smileCounter" destination="n64-EP-YKc" id="BKC-MS-mb6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uiu-Lq-P4x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
