@@ -1,2 +1,4 @@
 /backend/node_modules
 /backend/smiles
+*.DS_Store
+*.xcuserstate

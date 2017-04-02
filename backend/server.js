@@ -10,7 +10,7 @@ var mysql = require('mysql');
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
-  password : 'asdf',
+  password : '',
   database : 'smilethursday'
 });
 
@@ -59,7 +59,7 @@ app.post('/upload', function(req, res) {
     return res.status(400).send('No files were uploaded.');
  
   // The name of the input field (i.e. "sampleFile") is used to retrieve the uploaded file 
-  let sampleFile = req.files.file;
+  //let sampleFile = req.files.file;
  
   // Use the mv() method to place the file somewhere on your server 
   mkdirp('./uploads', function (err) {
