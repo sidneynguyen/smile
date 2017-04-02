@@ -10,6 +10,23 @@ var conn = mysql.createConnection({
   database : 'smilethursday'
 });
 
+router.post('/users/login', function(req, res) {
+  var fbId = req.body.fbId;
+  conn.query("INSERT INTO Users (fbId) VALUES ('" + fbId + "') ON DUPLICATE KEY UPDATE fbId='" + fbId + "'", function(err, results) {
+    if (err) { throw err; }
+    res.json(results);
+  });
+});
+
+router.post('/users', function(req, res) {
+  var fbId = req.body.fbId;
+  var numSmiles = req.body.numSmiles;
+  conn.query("UPDATE Users SET smilePoints=smilePoints + " + numSmiles + " WHERE fbId='" + fbId + "'", function(err, results) {
+    if (err) { throw err; }
+    res.json(results);
+  });
+});
+
 router.get('/posts', function(req, res) {
   var scope = req.query.scope;
   if (scope == 'global') {
