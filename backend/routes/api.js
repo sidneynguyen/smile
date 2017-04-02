@@ -27,7 +27,7 @@ router.post('/posts/friends', function(req, res) {
   for (var i = 1; i < friendIds.length; i++) {
     friendsQuery += " OR '" + friendIds[i] + "'";
   }
-  var query = "SELECT * FROM Posts WHERE fbId IN (" + friendsQuery + ") ORDER BY date";
+  var query = "SELECT * FROM Posts WHERE fbId IN (" + friendsQuery + ") AND (privacy='friends' OR privacy='public') ORDER BY date";
   conn.query(query, function(err, results) {
     if (err) { throw err; }
     res.json(results);
