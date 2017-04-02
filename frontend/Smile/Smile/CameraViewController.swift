@@ -88,7 +88,7 @@ class CameraViewController : UIViewController, AVCapturePhotoCaptureDelegate {
                 self.smileCounter.text = "\(self.numFaces!) smiles!"
                 
                 //if no smiles, exit captured mode
-                if smiling.count < 1 {
+                if smiling.count < 2 {
                     self.hasCaptured = false
                     
                     //show say cheese
