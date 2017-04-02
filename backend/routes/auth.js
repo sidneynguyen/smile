@@ -4,10 +4,10 @@ var passport = require('passport');
 var mongoose = require('mongoose');
 var FacebookTokenStrategy = require('passport-facebook-token');
 var mysql = require('mysql');
-var connection = mysql.createConnection({
+var conn = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
-  password : '',
+  password : 'asdf',
   database : 'smilethursday'
 });
 
@@ -19,10 +19,14 @@ router.post('/facebook/token',
 );
 
 passport.use(new FacebookTokenStrategy({
-  clientID: 'insert id',
-  clientSecret: 'insert secret'
+  clientID: '1892540067669625',
+  clientSecret: '3fae0d5a4bd5089ce471ee1955228a2f'
 }, function(accessToken, refreshToken, profile, done) {
-  User.find({fbId: profile.id}, function(err, user) {
+  conn.query("INSERT INTO Users (fbId, token) VALUES ('" + profile.id + ", " + accessToken + ") ON DUPLICATE KEY UPDATE token=" + accessToken, function(err, results) {
+    if (err) { return done(err); }
+    return done(err, user);
+  });
+  /*User.find({fbId: profile.id}, function(err, user) {
     if (err) {
       return done(err);
     }
@@ -46,7 +50,7 @@ passport.use(new FacebookTokenStrategy({
         return done(err, user);
       });
     }
-  });
+  });*/
 }));
 
 passport.serializeUser(function(user, done) {
