@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -37,17 +39,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgS-Bp-x16">
-                                <rect key="frame" x="160" y="617" width="55" height="30"/>
-                                <state key="normal" title="Capture"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgS-Bp-x16">
+                                <rect key="frame" x="127.5" y="527" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="42c-HR-MiT"/>
+                                    <constraint firstAttribute="width" constant="120" id="wUH-wE-bIq"/>
+                                </constraints>
+                                <state key="normal" title="Capture" image="Button"/>
                                 <connections>
                                     <action selector="takePhoto:" destination="pCf-7S-cnG" eventType="touchUpInside" id="GA0-mm-HmP"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ar0-lk-xbs">
+                                <rect key="frame" x="10" y="597" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="W8K-Et-IOE"/>
+                                    <constraint firstAttribute="height" constant="60" id="iFb-DT-gLh"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="World"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RUM-xJ-sQ9">
+                                <rect key="frame" x="6" y="10" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="3Qm-QU-dZp"/>
+                                    <constraint firstAttribute="height" constant="60" id="jPC-a3-zRh"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="x"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R7o-I5-gdB">
+                                <rect key="frame" x="295" y="583" width="80" height="89"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="R7o-I5-gdB" secondAttribute="height" multiplier="0.9" id="Zht-c2-iyD"/>
+                                    <constraint firstAttribute="width" constant="80" id="gfU-HJ-uSv"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Arrow"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Ar0-lk-xbs" firstAttribute="leading" secondItem="eVy-2W-2aS" secondAttribute="leading" constant="10" id="0H9-ST-NNk"/>
                             <constraint firstItem="bgS-Bp-x16" firstAttribute="centerX" secondItem="eVy-2W-2aS" secondAttribute="centerX" id="9XJ-LJ-WbM"/>
+                            <constraint firstItem="RUM-xJ-sQ9" firstAttribute="top" secondItem="LdX-ej-CCN" secondAttribute="bottom" constant="-10" id="9aq-3s-uUh"/>
+                            <constraint firstItem="c7C-uu-Ogt" firstAttribute="top" secondItem="R7o-I5-gdB" secondAttribute="bottom" constant="-5" id="Bjj-hc-Rzr"/>
+                            <constraint firstAttribute="bottom" secondItem="Ar0-lk-xbs" secondAttribute="bottom" constant="10" id="MYW-bJ-7OB"/>
+                            <constraint firstItem="RUM-xJ-sQ9" firstAttribute="leading" secondItem="eVy-2W-2aS" secondAttribute="leadingMargin" constant="-10" id="Myh-NA-mKV"/>
+                            <constraint firstAttribute="trailing" secondItem="R7o-I5-gdB" secondAttribute="trailing" id="g4G-My-Xxm"/>
                             <constraint firstItem="c7C-uu-Ogt" firstAttribute="top" secondItem="bgS-Bp-x16" secondAttribute="bottom" constant="20" id="pEY-gk-82N"/>
                         </constraints>
                     </view>
@@ -115,4 +151,10 @@
             <point key="canvasLocation" x="2958" y="441"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Arrow" width="160" height="217"/>
+        <image name="Button" width="258" height="260"/>
+        <image name="World" width="148" height="148"/>
+        <image name="x" width="173" height="173"/>
+    </resources>
 </document>
