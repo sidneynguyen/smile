@@ -69,6 +69,22 @@ class CameraViewController : UIViewController, AVCapturePhotoCaptureDelegate {
                 
                 print("Found \(faces.count) faces")
                 
+                if faces.count < 2 {
+                    print("You are a failure")
+                } else {
+                    var numSmiles = 0
+                    for (var i = 0; i < faces.count; i++) {
+                        if faces[i].attributes.smile > 0.3 {
+                            numSmiles++
+                        }
+                    }
+                    if numSmiles < 2 {
+                        print("You are a failure")
+                    } else {
+                        // call api
+                    }
+                }
+                
                 self.manager.post("/api/posts", parameters: nil, constructingBodyWith: {formData in
                     formData.appendPart(withFileData: jpeg, name: "file", fileName: "file", mimeType: "image/jpg")
                     formData.appendPart(withForm: "0".data(using: .utf8)!, name: "num_faces")
