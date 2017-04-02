@@ -8,9 +8,14 @@
 
 import UIKit
 
+var masterPageViewController : MasterPageViewController!
+
 class MasterPageViewController : StaticPageViewController {
     
     override func loadViewControllers() -> [UIViewController] {
+        
+        masterPageViewController = self
+        
         return [
             storyboard!.instantiateViewController(withIdentifier: "GlobalFeedViewController"),
             storyboard!.instantiateViewController(withIdentifier: "CameraPageViewController")

@@ -72,6 +72,8 @@ class CameraViewController : UIViewController, AVCapturePhotoCaptureDelegate {
         
         let jpeg = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: photoSampleBuffer!, previewPhotoSampleBuffer: nil)!
         
+        self.capturedImageJPEG = jpeg
+        
         view.layer.contents = UIImage(data: jpeg)!.cgImage!
         
         let client = MPOFaceServiceClient(subscriptionKey: "a154bd9a80564b6da75920a78c537d59")
@@ -79,18 +81,21 @@ class CameraViewController : UIViewController, AVCapturePhotoCaptureDelegate {
         client?.detect(with: jpeg, returnFaceId: true, returnFaceLandmarks: true, returnFaceAttributes: [NSNumber(value: MPOFaceAttributeTypeSmile.rawValue)], completionBlock: { (faces, error) in
             if let faces = faces {
                 
-                print("Found \(faces.count) faces")
+                let smiling = faces.filter {$0.attributes.smile.doubleValue > 0.5}
                 
-                self.manager.post("/api/posts", parameters: nil, constructingBodyWith: {formData in
-                    formData.appendPart(withFileData: jpeg, name: "file", fileName: "file", mimeType: "image/jpg")
-                    formData.appendPart(withForm: "0".data(using: .utf8)!, name: "num_faces")
-                    formData.appendPart(withForm: UUID().uuidString.data(using: .utf8)!, name: "uid")
-                    formData.appendPart(withForm: UUID().uuidString.data(using: .utf8)!, name: "uuid")
-                }, success: { (_, _) in
-                    print("success :)")
-                }) { (_, error) in
-                    print("failure :( error=\(error)")
+                self.numFaces = smiling.count
+                
+                self.smileCounter.text = "\(self.numFaces!) smiles!"
+                
+                //if no smiles, exit captured mode
+                if smiling.count < 1 {
+                    self.hasCaptured = false
+                    
+                    //show say cheese
+                    self.sayCheese.isHidden = false
                 }
+                
+                
             } else {
                 print(error ?? "unknown error")
             }
@@ -100,8 +105,32 @@ class CameraViewController : UIViewController, AVCapturePhotoCaptureDelegate {
         
     }
     
+    var capturedImageJPEG : Data!
+    var numFaces : Int!
+    
+    @IBOutlet weak var sayCheese: UILabel!
+    
+    
+    func makePost(privacy: String) {
+        self.manager.post("/api/posts", parameters: nil, constructingBodyWith: {formData in
+            formData.appendPart(withFileData: self.capturedImageJPEG, name: "file", fileName: "file", mimeType: "image/jpg")
+            formData.appendPart(withForm: "0".data(using: .utf8)!, name: "num_faces")
+            formData.appendPart(withForm: UUID().uuidString.data(using: .utf8)!, name: "uid")
+            formData.appendPart(withForm: UUID().uuidString.data(using: .utf8)!, name: "uuid")
+            formData.appendPart(withForm: privacy.data(using: .utf8)!, name: "privacy")
+        }, success: { (_, _) in
+            print("success :)")
+        }) { (_, error) in
+            print("failure :( error=\(error)")
+        }
+    }
+    
     var hasCaptured : Bool = false {
         didSet {
+            
+            sayCheese.isHidden = true
+            
+            smileCounter.text = ""
             
             cancelButton.isHidden = !hasCaptured
             captureButton.isHidden = hasCaptured
@@ -116,7 +145,19 @@ class CameraViewController : UIViewController, AVCapturePhotoCaptureDelegate {
     }
     
     @IBAction func world(_ sender: Any) {
+        if hasCaptured {
+            makePost(privacy: "public")
+            hasCaptured = false
+        } else {
+            masterPageViewController.move(to: 0)
+        }
     }
     @IBAction func personal(_ sender: Any) {
+        if hasCaptured {
+            makePost(privacy: "private")
+            hasCaptured = false
+        } else {
+            cameraPageViewController.move(to: 1)
+        }
     }
 }

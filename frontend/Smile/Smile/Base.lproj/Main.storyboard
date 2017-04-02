@@ -91,6 +91,14 @@
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Say cheese!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9i4-xb-rYQ">
+                                <rect key="frame" x="79.5" y="309.5" width="216" height="49"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -102,13 +110,16 @@
                             <constraint firstAttribute="bottom" secondItem="Ar0-lk-xbs" secondAttribute="bottom" constant="10" id="MYW-bJ-7OB"/>
                             <constraint firstItem="RUM-xJ-sQ9" firstAttribute="leading" secondItem="eVy-2W-2aS" secondAttribute="leadingMargin" constant="-10" id="Myh-NA-mKV"/>
                             <constraint firstItem="c7C-uu-Ogt" firstAttribute="top" secondItem="n64-EP-YKc" secondAttribute="bottom" constant="10" id="U9K-fd-BbA"/>
+                            <constraint firstItem="9i4-xb-rYQ" firstAttribute="centerY" secondItem="eVy-2W-2aS" secondAttribute="centerY" id="Y1L-B6-20Y"/>
                             <constraint firstAttribute="trailing" secondItem="R7o-I5-gdB" secondAttribute="trailing" id="g4G-My-Xxm"/>
                             <constraint firstItem="c7C-uu-Ogt" firstAttribute="top" secondItem="bgS-Bp-x16" secondAttribute="bottom" constant="20" id="pEY-gk-82N"/>
+                            <constraint firstItem="9i4-xb-rYQ" firstAttribute="centerX" secondItem="eVy-2W-2aS" secondAttribute="centerX" id="pyj-eO-gSw"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cancelButton" destination="RUM-xJ-sQ9" id="lsz-oA-IAu"/>
                         <outlet property="captureButton" destination="bgS-Bp-x16" id="41g-wX-7pD"/>
+                        <outlet property="sayCheese" destination="9i4-xb-rYQ" id="FDO-Zf-2PC"/>
                         <outlet property="smileCounter" destination="n64-EP-YKc" id="BKC-MS-mb6"/>
                     </connections>
                 </viewController>

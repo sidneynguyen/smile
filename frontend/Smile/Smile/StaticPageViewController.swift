@@ -54,4 +54,11 @@ class StaticPageViewController : UIPageViewController, UIPageViewControllerDataS
         
     }
     
+    func move(to i: Int) {
+        
+        let direction: UIPageViewControllerNavigationDirection = i > vcs.index(of: viewControllers![0])! ? .forward : .reverse
+        
+        setViewControllers([vcs[i]], direction: direction, animated: true, completion: nil)
+    }
+    
 }

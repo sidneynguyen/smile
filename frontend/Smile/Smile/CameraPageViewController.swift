@@ -8,9 +8,14 @@
 
 import UIKit
 
+var cameraPageViewController : CameraPageViewController!
+
 class CameraPageViewController : StaticPageViewController {
     
     override func loadViewControllers() -> [UIViewController] {
+        
+        cameraPageViewController = self
+        
         return [
             self.storyboard!.instantiateViewController(withIdentifier: "CameraViewController"),
             self.storyboard!.instantiateViewController(withIdentifier: "MemoriesViewController")
