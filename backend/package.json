@@ -11,7 +11,12 @@
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
+    "express-fileupload": "^0.1.2",
+    "express-session": "^1.15.2",
+    "mkdirp": "^0.5.1",
     "mongoose": "^4.9.2",
-    "passport": "^0.3.2"
+    "mysql": "^2.13.0",
+    "passport": "^0.3.2",
+    "passport-facebook-token": "^3.3.0"
   }
 }

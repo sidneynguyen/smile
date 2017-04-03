@@ -9,6 +9,7 @@ var conn = mysql.createConnection({
   password : 'asdf',
   database : 'smilethursday'
 });
+var spawn = require('child_process').spawn;
 
 router.post('/users/login', function(req, res) {
   var fbId = req.body.fbId;
@@ -78,9 +79,17 @@ router.post('/posts', function(req, res) {
     var image_id = results.insertId;
     var imageFile = req.files.file;
     mkdirp('./smiles');
-    //mkdirp('./smiles/' + post.uid);
     imageFile.mv('./smiles/' + image_id + '.jpg');
-    res.json(results);
+
+    // Verify face results
+    var process = spawn('python',["./verifyFace.py", image_id]);
+    process.stdout.on('data', function (data) {
+      var numSmiles = parseInt(data.toString('utf8')[0]);
+      conn.query("UPDATE Users SET smilePoints=smilePoints + " + numSmiles + " WHERE fbId='" + fbId + "'", function(err, results) {
+      if (err) { throw err; }
+        res.json({data: numSmiles});
+      });
+    });
   });
 });
 

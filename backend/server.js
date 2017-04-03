@@ -13,6 +13,7 @@ var connection = mysql.createConnection({
   password : 'asdf',
   database : 'smilethursday'
 });
+var spawn = require('child_process').spawn;
 
 connection.connect();
 
@@ -36,8 +37,12 @@ app.use(passport.session());
 app.use('/auth', auth);
 app.use('/api', api);
 
-app.get('/', function(req, res) {
-  res.sendFile('index.html');
+app.get('/test', function(req, res) {
+  var process = spawn('python',["./verifyFace.py", '1']);
+  process.stdout.on('data', function (data) {
+    console.log(data);
+    res.json({data: data.toString('utf8')[0]});
+  });
 });
 
 const port = 3000;
